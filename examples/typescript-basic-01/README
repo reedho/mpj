@@ -84,3 +84,8 @@ Entrypoint main = bundle.js bundle.js.map
     + 1 hidden module
 ```
 
+
+Selanjutnya silahkan buka link official terkait typescript+react+webpack untuk
+mendapatkan penjelasan yang lebih detail.
+
+http://www.typescriptlang.org/docs/handbook/react-&-webpack.html
