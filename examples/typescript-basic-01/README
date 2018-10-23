@@ -1,0 +1,86 @@
+Ridho, 23-Oct-2018
+
+Jadi, untuk aplikasi basic typescript+react, minimal modul-module yang
+diperlukan adalah:
+
+* `react` & `@types/react`
+* `react-dom` & `@types/react-dom`
+* `typescript`
+* `webpack` & `webpack-cli`
+* `awesome-typescript-loader`
+* `source-map-loader`
+
+
+TLDR;
+
+```
+yarn init
+yarn add -D typescript awesome-typescript-loader source-map-loader webpack webpack-cli
+yarn add react @types/react react-dom @types/react-dom
+```
+
+Kemudian, buat file-file berikut:
+
+* webpack.config.js
+* index.html
+* tsconfig.json
+
+
+Contoh basic react app dengan typescript:
+
+```
+src
+├── components
+│   └── Hello.tsx
+└── index.tsx
+```
+
+Dan akhirnya, jalankan `webpack`.
+
+
+
+Webpack output info:
+
+    npx webpack --mode=production
+
+```
+ℹ ｢atl｣: Using typescript@3.1.3 from typescript
+ℹ ｢atl｣: Using tsconfig.json from /Users/ridho/Gitrepo/mpj/examples/typescript-basic-01/tsconfig.json
+ℹ ｢atl｣: Checking started in a separate process...
+ℹ ｢atl｣: Time: 726ms
+Hash: e6f5ba209862c7e7c9b1
+Version: webpack 4.22.0
+Time: 2036ms
+Built at: 10/23/2018 11:37:11 AM
+        Asset      Size  Chunks             Chunk Names
+    bundle.js  1.39 KiB       0  [emitted]  main
+bundle.js.map  5.43 KiB       0  [emitted]  main
+Entrypoint main = bundle.js bundle.js.map
+[0] external "React" 42 bytes {0} [built]
+[1] ./src/index.tsx 326 bytes {0} [built]
+[2] external "ReactDOM" 42 bytes {0} [built]
+    + 1 hidden module
+```
+
+
+    npx webpack --mode=production
+
+```
+ℹ ｢atl｣: Using typescript@3.1.3 from typescript
+ℹ ｢atl｣: Using tsconfig.json from /Users/ridho/Gitrepo/mpj/examples/typescript-basic-01/tsconfig.json
+ℹ ｢atl｣: Checking started in a separate process...
+ℹ ｢atl｣: Time: 803ms
+Hash: 98e3ca20be3c320bd432
+Version: webpack 4.22.0
+Time: 2137ms
+Built at: 10/23/2018 11:38:30 AM
+        Asset      Size  Chunks             Chunk Names
+    bundle.js  5.16 KiB    main  [emitted]  main
+bundle.js.map  4.52 KiB    main  [emitted]  main
+Entrypoint main = bundle.js bundle.js.map
+[./src/index.tsx] 326 bytes {main} [built]
+[react] external "React" 42 bytes {main} [built]
+[react-dom] external "ReactDOM" 42 bytes {main} [built]
+    + 1 hidden module
+```
+
