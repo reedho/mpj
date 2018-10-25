@@ -1,0 +1,22 @@
+* Wed, 24-Oct-2018
+
+** vscode environment variables
+
+*** `$(workspaceRoot)` has been deprecated in favor of `$(workspaceFolder)` in order to align better with "Multi-root" workspace. 
+
+See https://stackoverflow.com/a/50215725. 
+
+
+* Thu, 25-Oct-2018
+
+** Regarding webpack `enforce` (Rule.enforce) configuration property
+
+Seting ini menentukan kategori dari loader yang bersangkutan, apakah `pre` atau
+`post`. Jika tidak diisi berarti loader yang bersangkutan adalah `normal` loader. 
+
+Loader hanyalah js module function yang mentransform source code suatu
+module. Si loader `runner` memanggil function ini dan mengumpankan return value
+nya ke loader berikut nya.
+
+`Loaders` dieksekusi dengan urutan `pre`, `normal`, `inline` dan `post`
+
