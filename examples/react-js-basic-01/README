@@ -1,0 +1,39 @@
+25-Oct-2018.
+
+Goal:
+
+Basic skeleton react js application without `create-react-app`.
+
+
+TLDR;
+
+yarn init -y
+yarn add react react-dom
+yarn add -D babel-loader @babel/core @babel/preset-react
+yarn add -D webpack webpack-cli
+
+Then create entry file src/index.js
+
+At this point, we can bundle if src/index.js not contains JSX.
+
+We have to tell webpack to use loader that is able to parse JSX, which is,
+provided by babel-loader via @babel/preset-react.
+
+First, at least we have to make babel config file in .babelrc.
+
+Contents of .babelrc, at minimum is:
+
+{ "presets": ["@babel/preset-react"] }
+
+
+Then, at this point, we can do:
+
+  npx webpack -p --module-bind "js=babel-loader"
+
+
+To save typing webpack module-bind every time, we can make it stick with config
+file (by default webpack will search webpack.config.js)
+
+  npx webpack -p  # for production build
+  npx webpack -d  # for devel build
+
